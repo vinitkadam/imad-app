@@ -104,6 +104,7 @@ app.get('/:articleName', function(req,res){
 });
 
 app.get('/article-two', function(req,res){
+    var articleName = req.paramsarticleName;
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
 
