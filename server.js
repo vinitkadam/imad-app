@@ -31,24 +31,19 @@ var articles = {
         `
     },
     'article-two':{
-        title: 'Article One | Vinit Kadam',
-        heading: 'Article One',
+        title: 'Article Two | Vinit Kadam',
+        heading: 'Article Two',
         date:'Aug 11, 2017',
         content: `
             <p>
         		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
         	</p>
-        	<p>
-        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
-        	</p>
-        	<p>
-        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
-        	</p>
+
         `
     },
     'article-three':{
-        title: 'Article One | Vinit Kadam',
-        heading: 'Article One',
+        title: 'Article Three | Vinit Kadam',
+        heading: 'Article Three',
         date:'Aug 11, 2017',
         content: `
             <p>
@@ -57,9 +52,7 @@ var articles = {
         	<p>
         		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
         	</p>
-        	<p>
-        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
-        	</p>
+
         `
     }
 };
