@@ -97,6 +97,7 @@ function template(data){
             </body>
             </html>
     `
+    return htmlTemplate;
 }
 
 app.get('/:articleName', function(req,res){
