@@ -100,7 +100,7 @@ function template(data){
 }
 
 app.get('/:articleName', function(req,res){
-    var articleName = req.paramsarticleName;
+    var articleName = req.params.articleName;
     res.send(template(articles[articleName]));
 });
 
