@@ -13,8 +13,94 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/article-one', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+var articles = {
+    'article-one': {
+        title: 'Article One | Vinit Kadam',
+        heading: 'Article One',
+        date:'Aug 11, 2017',
+        content: `
+            <p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        	<p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        	<p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        `
+    },
+    'article-two':{
+        title: 'Article One | Vinit Kadam',
+        heading: 'Article One',
+        date:'Aug 11, 2017',
+        content: `
+            <p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        	<p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        	<p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        `
+    },
+    'article-three':{
+        title: 'Article One | Vinit Kadam',
+        heading: 'Article One',
+        date:'Aug 11, 2017',
+        content: `
+            <p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        	<p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        	<p>
+        		This is the content for my new article.This is the content for my new article.This is the content for my new article.This is the content for my new article.
+        	</p>
+        `
+    }
+};
+
+function template(data){
+    
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    
+    var htmlTemplate = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+            	<title>${title}</title>
+            	<meta name="viewport" content="width=device-width, initial-scale=1">
+                <link href="ui/style.css" rel="stylesheet" />
+            </head>
+            
+            <body>
+                <div class="container">
+                    <div>
+                    	<a href="/">home</a>
+                    </div>
+                    <hr>
+                    <h3></h3>
+                    <div>
+                    	${date}
+                    </div>
+                    <div>
+                    	${content}
+                    </div>
+                </div>
+            </body>
+            </html>
+    `
+}
+
+app.get('/:articleName', function(req,res){
+    res.send(template(articles[articleName]));
 });
 
 app.get('/article-two', function(req,res){
