@@ -97,10 +97,10 @@ app.get('/:articleName', function(req,res){
     var articleName = req.params.articleName;
     res.send(template(articles[articleName]));
 });
-
-app.get('/count', function(req,res){
-    //counter=counter+1;
-    res.send('1');
+var counter = 0;
+app.get('/counter', function(req,res) {
+    counter = counter + 1;
+    res.send(counter.toString());
 });
 
 app.get('/ui/madi.png', function (req, res) {
