@@ -17,6 +17,6 @@ button.onclick = function(){
     };
     
     //Make a request
-    request.open('GET','http://vinitkadam1997.imad.hasura-app.io/counter',false);
+    request.open('GET','http://vinitkadam1997.imad.hasura-app.io/counter',true);
     request.send(null);
 };
