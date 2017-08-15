@@ -105,7 +105,7 @@ app.get('/counter', function(req,res) {
 names=[];
 app.get('/submit-name',function(req,res){
     //get the name from request
-    var name = re.query.name;
+    var name = res.query.name;
     
     names.push(name);
     res.send(JSON.stringify(names));
