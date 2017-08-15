@@ -51,6 +51,4 @@ submit.onclick = function() {
     request.open('GET','http://vinitkadam1997.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
     
-    //capture a list of names and render it as a list
-    
 };
