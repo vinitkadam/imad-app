@@ -31,6 +31,18 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+app.get('/test-db', function(req,res){
+    //make a select request
+    //return a response
+    pool.query('Select * from test',function(err,result){
+        if(err)
+            res.status(500).send(err.toString());
+        else{
+            res.send(JSON.stringify(result));
+        }
+    });
+});
+
 var articles = {
     'article-one': {
         title: 'Article One | Vinit Kadam',
