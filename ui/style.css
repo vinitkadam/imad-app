@@ -25,9 +25,7 @@ body {
     margin: 0 auto;
     color: #444444;
     font-family: sans serif;
-    box-shadow:10px 10px 20px #C0C0C0;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     padding:20px;
-    border:1px #808080;
-    border-radius:10px;
 }
 
