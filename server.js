@@ -152,8 +152,6 @@ app.get('/articles/:articleName', function(req,res){
             }
         }
     });
-    
-    res.send(template(articles[articleName]));
 });
 
 app.get('/test-db', function(req,res){
