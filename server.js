@@ -104,13 +104,7 @@ function template(data){
             </head>
             
             <body>
-                <div style="padding-top:200px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #444444;
-    font-family: sans serif;
-    box-shadow: 10px 10px 20px #dadada;
-    padding: 20px;">
+                <div class="container">
                     <div>
                     	<a href="/">home</a>
                     </div>
