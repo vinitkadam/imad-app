@@ -111,7 +111,7 @@ function template(data){
                     <hr>
                     <h3></h3>
                     <div>
-                    	${date}
+                    	${date.toDateString()}
                     </div>
                     <div>
                     	${content}
