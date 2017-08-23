@@ -25,5 +25,7 @@ body {
     margin: 0 auto;
     color: #444444;
     font-family: sans serif;
+    box-shadow:10px 10px 20px #C0C0C0;
+    padding:20px;
 }
 
