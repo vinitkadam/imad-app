@@ -103,7 +103,7 @@ function template(data){
                 <link href="/ui/style.css" rel="stylesheet" />
             </head>
             
-            <body bgcolor="#fcfcfc">
+            <body bgcolor="#A9A9A9">
                 <div class="container">
                     <div>
                     	<a href="/">home</a>
