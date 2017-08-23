@@ -28,5 +28,6 @@ body {
     box-shadow:10px 10px 20px #C0C0C0;
     padding:20px;
     border:2px solid #808080;
+    border-radius:5px;
 }
 
