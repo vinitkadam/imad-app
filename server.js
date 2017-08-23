@@ -14,7 +14,7 @@ var config = {
 };
 
 //create a pool
-var pool = Pool(config);
+var pool = new Pool(config);
 
 var app = express();
 app.use(morgan('combined'));
