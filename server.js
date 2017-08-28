@@ -21,6 +21,7 @@ var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -164,7 +165,8 @@ function hash(input,salt){
 }
 
 app.get('/hash/:input',function(req,res){
-    var hashedString = hash(req.params.input,'this-is-a-random-salt');
+    var salt = crypto.randomBytes(128).toString('hex');
+    var hashedString = hash(req.params.input,salt);
     res.send(hashedString);
 });
 
