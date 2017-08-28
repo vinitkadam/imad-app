@@ -167,7 +167,7 @@ function hash(input,salt){
 
 app.get('/hash/:input',function(req,res){
     var salt = crypto.randomBytes(128).toString('hex');
-    var hashedString = hash(req.params.input,salt);
+    var hashedString = hash(req.params.input,'this-is-a-random-salt');
     res.send(hashedString);
 });
 
