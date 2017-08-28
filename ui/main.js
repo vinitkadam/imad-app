@@ -52,3 +52,29 @@ submit.onclick = function() {
     request.send(null);
     
 };
+
+//for login
+var login = document.getElementById('submit_button');
+
+login.onclick = function() {
+    
+    //create a request
+    var request = new XMLHttpRequest();
+    
+    //capture the reponse and store it in a variable
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.status === 200){
+                alert('login successfull');
+            }
+        }
+    };
+    
+    //Make a request
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    
+    request.open('POST','http://vinitkadam1997.imad.hasura-app.io/login',true);
+    request.send({"username":username,"password":password});
+    
+};
