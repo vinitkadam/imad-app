@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
-var bodyParsor = require('body-parser');
+var bodyParser = require('body-parser');
 
 var Pool = require('pg').Pool; //include Pool to run queries
 
@@ -20,7 +20,7 @@ var pool = new Pool(config);
 
 var app = express();
 app.use(morgan('combined'));
-app.user(bodyParsor.json());
+app.user(bodyParser.json());
 
 
 app.get('/', function (req, res) {
@@ -166,7 +166,6 @@ function hash(input,salt){
 }
 
 app.get('/hash/:input',function(req,res){
-    var salt = crypto.randomBytes(128).toString('hex');
     var hashedString = hash(req.params.input,'this-is-a-random-salt');
     res.send(hashedString);
 });
