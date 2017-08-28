@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
-var bodyParser = require('body-parser');
+
 
 var Pool = require('pg').Pool; //include Pool to run queries
 
@@ -20,8 +20,6 @@ var pool = new Pool(config);
 
 var app = express();
 app.use(morgan('combined'));
-app.user(bodyParser.json());
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
