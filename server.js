@@ -194,13 +194,15 @@ app.post('/login',function(req,res){
             res.status(500).send(err.toString());
         else{
             if(result.rows.length===0){
-                res.status(403).send('user not found');
+                res.status(403).send('username/password incorrect');
             } else{
                 var dbString = result.rows[0].password;
                 var salt = dbString.split('$')[2];
                 var hashedpass = hash(password,salt);
                 if(hashedpass === dbString){
                     res.send("user logged in successfully");
+                } else {
+                    res.status(403).send('username/password incorrect');
                 }
             }
             
