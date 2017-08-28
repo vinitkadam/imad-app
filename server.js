@@ -122,7 +122,7 @@ function template(data){
                 </div>
             </body>
             </html>
-    `
+    `;
     return htmlTemplate;
 }
 var counter = 0;
@@ -177,7 +177,7 @@ app.post('/createuser',function(req,res){
     var salt = crypto.randomBytes(128).toString('hex');
     var hashedpass = hash(password,salt);
     pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)',[username,hashedpass],function(err,result){
-        if(err)
+        if(err) 
             res.status(500).send(err.toString());
         else{
             res.send("user created successfully");
