@@ -220,7 +220,7 @@ app.post('/login',function(req,res){
                     
                     
                     
-                    res.send("user logged in successfully");
+                    res.send(JSON.stringify(message:"user logged in successfully"));
                 } else {
                     res.status(403).send('username/password incorrect');
                 }
